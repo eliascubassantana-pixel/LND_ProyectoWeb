@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+@font-face {
+    font-family: 'Jurassic Park';
+    src: url('JurassicPark.woff2') format('woff2'),
+        url('JurassicPark.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-image: url("img/Background.jpg");
+    background-size: 100%;
+    cursor: url("img/pointer.cur");
+}
+
+.head {
+    background-color: forestgreen;
+    color: white;
+    font-family: 'Jurassic Park';
+    font-size: 70px;
+    display: flex;
+    align-items: center;      
+    padding: 10px 20px;
+    padding-right: 120px;
+    justify-content: space-between;
+}   
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.imghead {
+    width: 10%;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    
+    color: white;
+    text-decoration: none;
+}
+
+.intro {
+    color: white;
+    margin: 10px 110px;
+}
+
+.foot {
+    background-color: forestgreen;
+    color: white;
+    font-family: 'Jurassic Park';
+    font-size: 70px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+}
+
+.imgfoot {
+    width: 4%;
+}
+
+
