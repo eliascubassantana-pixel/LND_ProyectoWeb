@@ -1,0 +1,141 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+@font-face {
+    font-family: 'Jurassic Park';
+    src: url('JurassicPark.woff2') format('woff2'),
+        url('JurassicPark.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    background-image: url("img/Background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.head {
+    background-color: forestgreen;
+    color: white;
+    font-family: 'Jurassic Park';
+    font-size: 70px;
+    display: flex;
+    padding: 10px 20px;
+    justify-content: space-between;
+}   
+
+.nav {
+    padding-right: 80px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 70px;
+    padding: 15px;
+}
+
+.nav ul {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+}
+
+.nav ul li:hover {
+    background: #2d3436;
+}
+
+.nav ul li:hover ul {
+    display: block;
+}
+
+.nav ul li ul {
+  position: absolute;
+  width: 200px;
+  display: none;
+}
+
+.nav ul li ul li { 
+  background: #555; 
+  display: block; 
+}
+
+.nav ul li ul li a {
+    display:block !important;
+} 
+
+.nav ul li ul li:hover {
+    background: #2d3436;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.imghead {
+    width: 10%;
+}
+
+.intro {
+    color: white;
+    margin: 10px 110px;
+    text-align: justify;
+}
+
+.contenido div {
+    color: white;
+    background-color: #2d3436;
+    float: left;
+    width: 300px;
+    margin: 20px;
+}
+
+.contenido img {
+    width: 40%;
+}
+
+.foot {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: forestgreen;
+    color: white;
+    font-family: 'Jurassic Park';
+    font-size: 70px;
+    padding: 15px 30px;
+}
+
+.autor {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.autor img {
+    height: 70px;
+    width: auto;
+}
+
+.autor p {
+    margin: 0;
+}
+
+.sociales {
+    display: flex;
+    gap: 20px;
+}
+
+.imgsociales {
+    height: 70px;  
+    width: auto;
+    cursor: pointer;
+}
+

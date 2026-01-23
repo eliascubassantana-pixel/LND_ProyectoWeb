@@ -2,23 +2,30 @@
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="PrimitiveWeb.css">
+        <link rel="stylesheet" href="css/PrimitiveWeb.css">
         <title>Primitive Earth</title>
         <link rel="icon" type="image/x-icon" href="img/PrimitiveEarth.ico">
     </head>
     <body>
         <header class="head">
             <div class="logo">
-                <img class="imghead" src="img/PrimitiveEarth.png" alt="logo">
+                <img class="imghead" src="img/PrimitiveEarth.png" alt="A">
                 <span>Primitive Earth</span>
             </div>
-            <nav class="menu">
-                <a href="#Inico">Inicio</a>
-                <a href="#Dinos">Dinosaurios</a>
-                <a href="#Pelis">Peliculas y Series</a>
-                <a href="#Juegos">Videojuegos</a>
-                <a href="#Libros">Libros</a>
-            </nav>
+            <div class="nav">
+                <ul>
+                    <li>
+                        <a href="#">Menu</a>
+                        <ul>
+                            <li><a href="#Inicio">Inicio</a></li>
+                            <li><a href="#">Dinosaurios</a></li>
+                            <li><a href="#">Peliculas y Series</a></li>
+                            <li><a href="#">Libros</a></li>
+                            <li><a href="#">Videojuegos</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </header>
         <section class="intro">
             <div>
@@ -103,9 +110,34 @@
                 </p>
             </div>
         </section>
+        <section class="contenido">
+            <div>
+                <img src="img/LogoDino.png" alt="A">
+                <h1>Dinosaurios</h1>
+            </div>
+            <div>
+                <img src="img/LogoJuego.png" alt="A">
+                <h1>Videojuegos</h1>
+            </div>
+            <div></div>
+            <div></div>
+        </section>
         <footer class="foot">
-            <img class="imgfoot" src="img/PrimitiveEarth.png" alt="logo">
-            <p>Elias Cubas</p>
+            <div class="autor">
+                <img class="imgfoot" src="img/PrimitiveEarth.png" alt="A">
+                <p>Elias Cubas</p>
+            </div>
+            <div class="sociales">
+                <a href="https://discord.gg/pwDS8tsBXg" target="_blank">
+                    <img class="imgsociales" src="img/Discord.png" alt="Discord">
+                </a>
+                <a href="https://www.instagram.com" target="_blank">
+                    <img class="imgsociales" src="img/Instagram.png" alt="Instagram">
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <img class="imgsociales" src="img/X.jpg" alt="X">
+                </a>
+            </div>
         </footer>
     </body>
 </html>
