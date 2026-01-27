@@ -9,12 +9,6 @@ html, body { margin: 0; padding: 0; }
     font-display: swap;
 }
 
-body {
-    background-image: url("img/Background.png");
-    background-size: cover;
-    background-attachment: fixed;
-}
-
 .head {
     background-color: forestgreen;
     color: white;
@@ -24,6 +18,22 @@ body {
     padding: 10px 20px;
     justify-content: space-between;
 }   
+
+body {
+    background-image: url("img/Background.png");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.imghead {
+    width: 10%;
+}
 
 .nav {
     padding-right: 80px;
@@ -71,61 +81,6 @@ body {
 
 .nav ul li ul li:hover {
     background: #2d3436;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.imghead {
-    width: 10%;
-}
-
-.intro {
-    color: white;
-    margin: 10px 110px;
-    text-align: justify;
-}
-
-.intro h1 {
-    text-align: center;
-}
-
-.dino1 {
-    float: right;
-    text-align: center;
-    line-height: 150px;
-    margin: 0 0 10px 10px;
-    font-weight: bold;
-}
-
-.dino1 img {
-    width: 300px;
-}
-
-.contenido {
-    display: flex;
-    justify-content: center;
-    align-items: center;     
-    gap: 20px;
-}
-
-.contenido div {
-    color: white;
-    background-color: #2d3436;
-    float: left;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 300px;
-    margin: 20px;
-}
-
-.contenido img {
-    width: 40%;
 }
 
 .foot {

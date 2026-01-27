@@ -1,0 +1,54 @@
+.intro {
+    color: white;
+    margin: 10px 110px;
+    text-align: justify;
+}
+
+.intro h1 {
+    text-align: center;
+}
+
+.dino1 {
+    float: right;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px;
+}
+
+.dino1 img {
+    width: 300px;
+}
+
+.dino2 {
+    float: left;
+    text-align: center;
+    line-height: 25px;
+    margin: 10px;
+}
+
+.dino2 img {
+    width: 225px;
+}
+
+.contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    gap: 20px;
+}
+
+.contenido div {
+    color: white;
+    background-color: #2d3436;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 300px;
+    margin: 20px;
+}
+
+.contenido img {
+    width: 40%;
+}
