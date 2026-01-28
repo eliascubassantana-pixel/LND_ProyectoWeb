@@ -1,0 +1,33 @@
+.galeria {
+    color: white;
+}
+
+.galeria div {
+    background-color: #2d3436;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.descripcion {
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
