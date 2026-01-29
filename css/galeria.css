@@ -1,0 +1,27 @@
+.galeria {
+  color: white;
+}
+
+.galeria div {
+  background-color: #2d3436;
+  border-radius: 30px;
+  margin: 10px;
+}
+
+div.imagen img {
+  width: 100%;
+  height: auto;
+}
+
+.descripcion {
+  padding: 15px;
+  text-align: center;
+  color: white;
+}
+
+.cajon {
+  padding: 6px 6px;
+  float: left;
+  width: 25%;
+}
+
