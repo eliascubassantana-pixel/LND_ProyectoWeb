@@ -52,3 +52,52 @@
 .contenido img {
     width: 40%;
 }
+
+@media (max-width: 600px) {
+    .intro {
+        margin: 10px 20px;
+        text-align: left;
+    }
+
+    .dino1,
+    .dino2 {
+        float: none;
+        margin: 10px auto;
+    }
+
+    .dino1 img,
+    .dino2 img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .contenido {
+        flex-direction: column;
+    }
+
+    .contenido div {
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .intro {
+        margin: 20px 60px;
+    }
+
+    .contenido {
+        flex-wrap: wrap;
+    }
+
+    .contenido div {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .contenido div {
+        width: 300px;
+    }
+}

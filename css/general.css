@@ -121,3 +121,48 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 600px) {
+    .head {
+        flex-direction: column;
+        align-items: center;
+        font-size: 40px;
+        text-align: center;
+    }
+    .imghead {
+        width: 60px;
+    }
+
+    .nav {
+        padding-right: 0;
+    }
+
+    .nav a {
+        font-size: 35px;
+        padding: 10px;
+    }
+    .foot {
+        flex-direction: column;
+        gap: 20px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .imgsociales {
+        height: 50px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+
+    .head {
+        font-size: 55px;
+    }
+
+    .nav a {
+        font-size: 50px;
+    }
+
+    .foot {
+        font-size: 50px;
+    }
+}
