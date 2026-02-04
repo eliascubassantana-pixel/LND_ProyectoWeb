@@ -63,6 +63,9 @@
                 <img class="imgfoot" src="img/general/PrimitiveEarth.png" alt="A">
                 <p>Elias Cubas</p>
             </div>
+            <button class="open-modal" onclick="document.getElementById('sign').style.display='block'">
+                Registrarse
+            </button>
             <div class="sociales">
                 <a href="https://discord.gg/pwDS8tsBXg" target="_blank">
                     <img class="imgsociales" src="img/general/Discord.png" alt="Discord">
@@ -75,5 +78,31 @@
                 </a>
             </div>
         </footer>
+        <div id="sign" class="vent">
+            <span class="close" onclick="document.getElementById('sign').style.display='none'">&times;</span>
+
+            <form class="contenido" action="action_page.php">
+                <div class="contenedor">
+                    <h1>Registrarse</h1>
+                    <p>Porfavor Rellene el Formulario para Registrarse</p>
+                    <hr>
+                    <label><b>Email</b></label>
+                    <input type="text" placeholder="Introduce Email" name="email" required>
+                    <label><b>Contraseña</b></label>
+                    <input type="password" placeholder="Introduce Contraseña" name="cont" required>
+                    <label><b>Repite Contraseña</b></label>
+                    <input type="password" placeholder="Repite Contraseña" name="cont-rep" required>
+                    <label class="recuerdame">
+                    <input type="checkbox" checked> Recuerdame
+                    </label>
+                    <div class="clearfix">
+                        <button type="button" class="cancelbtn" onclick="document.getElementById('sign').style.display='none'">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="signupbtn">Registrarse</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </body>
 </html>

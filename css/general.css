@@ -166,3 +166,78 @@ body {
         font-size: 50px;
     }
 }
+
+.vent {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 60px;
+}
+
+.contenido {
+    background-color: #2d3436;
+    margin: auto;
+    border-radius: 10px;
+    width: 400px;
+    animation: zoom 0.3s;
+}
+
+.contenedor {
+    color: white;
+    margin: 20px;
+}
+
+@keyframes zoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+/* Inputs */
+.contenido input[type=text],
+.contenido input[type=password] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Botones */
+.contenido button {
+    width: 50%;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.signupbtn {
+    background-color: #04AA6D;
+    color: white;
+}
+
+.cancelbtn {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Cerrar */
+.close {
+    position: absolute;
+    right: 30px;
+    top: 15px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .modal-content {
+        width: 90%;
+    }
+}
