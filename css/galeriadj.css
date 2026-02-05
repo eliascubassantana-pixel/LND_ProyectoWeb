@@ -1,0 +1,39 @@
+.titulo {
+  color: white;
+  font-size: 2.2rem;
+  margin: 30px 20px;
+}
+
+.galeria {
+  column-count: 6; 
+  column-gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: #2d3436;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  break-inside: avoid; 
+  display: inline-block;
+  width: 100%;
+}
+.imagen {
+  width: 100%;
+}
+
+.imagen img {
+  width: 100%;
+  height: auto; 
+  display: block;
+}
+
+
+.descripcion {
+  padding: 15px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: white;
+}
+
