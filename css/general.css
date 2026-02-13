@@ -37,6 +37,7 @@ body {
 
 .nav {
     padding-right: 80px;
+    z-index: 5;
 }
 
 .nav a {
@@ -179,7 +180,7 @@ body {
     padding-top: 60px;
 }
 
-.contenido {
+.contenido2 {
     background-color: #2d3436;
     margin: auto;
     border-radius: 10px;
@@ -197,9 +198,8 @@ body {
     to {transform: scale(1)}
 }
 
-/* Inputs */
-.contenido input[type=text],
-.contenido input[type=password] {
+.contenido2 input[type=text],
+.contenido2 input[type=password] {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
@@ -207,8 +207,7 @@ body {
     background: #f1f1f1;
 }
 
-/* Botones */
-.contenido button {
+.contenido2 button {
     width: 50%;
     padding: 12px;
     border: none;
@@ -220,22 +219,6 @@ body {
     color: white;
 }
 
-.cancelbtn {
-    background-color: #f44336;
-    color: white;
-}
-
-/* Cerrar */
-.close {
-    position: absolute;
-    right: 30px;
-    top: 15px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
-
-/* Responsive */
 @media (max-width: 500px) {
     .modal-content {
         width: 90%;

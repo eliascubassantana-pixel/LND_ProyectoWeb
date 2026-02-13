@@ -30,9 +30,16 @@
                 </ul>
             </div>
         </header>
+        <section class="video">
+            <div>
+            <video autoplay muted loop>
+                <source src="img/inicio/video.mp4">
+            </video>
+            <h1 class="titulo">Bienvenido al mundo de los dinosaurios</h1>
+            </div>
+        </section>
         <section class="intro">
             <div>
-                <h1>Bienvenido al fascinante mundo de los dinosaurios</h1>
                 <p>
                     Los dinosaurios constituyen uno de los grupos de organismos más fascinantes y estudiados en la historia de la Tierra. Habitaron el planeta durante la era Mesozoica, hace aproximadamente entre 230 y 66 millones de años, desarrollándose en una amplia diversidad de especies que ocuparon distintos ecosistemas terrestres. Su estudio, a través de la paleontología, ha permitido comprender mejor los procesos de evolución, adaptación y extinción que han marcado la historia de la vida.
                 </p>
@@ -96,7 +103,7 @@
         </footer>
         <div id="sign" class="vent">
             <span class="close" onclick="document.getElementById('sign').style.display='none'">&times;</span>
-            <form class="contenido" action="action_page.php">
+            <form class="contenido2" action="action_page.php">
                 <div class="contenedor">
                     <h1>Registrarse</h1>
                     <p>Porfavor Rellene el Formulario para Registrarse</p>
@@ -112,9 +119,6 @@
                     </label>
                     <div class="clearfix">
                         <button type="submit" class="signupbtn">Registrarse</button>
-                         <button type="button" class="cancelbtn" onclick="document.getElementById('sign').style.display='none'">
-                            Cancelar
-                        </button>
                     </div>
                 </div>
             </form>
