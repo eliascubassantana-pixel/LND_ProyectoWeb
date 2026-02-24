@@ -36,37 +36,61 @@
         <section class="galeria">
             <div>
                 <div class="imagen">
-                        <img src="img/libros/BSRW.jpg" alt="A">
+                        <img src="img/libros/BSRW.jpg" alt="A"
+                        data-titulo="Battlesaurus: Rampage at Waterloo"
+                        data-descripcion="Battlesaurus: Rampage at Waterloo es una novela de historia alternativa escrita por Brian Falkner en 2015. Se ambienta durante las Guerras Napoleónicas, en un universo donde los dinosaurios nunca se extinguieron."
+                        data-genero="Genero: Historia alternativa y Fantasia"
+                        data-temas="Temas: Dinosaurios, Guerras">
                     <h2 class="descripcion">Battlesaurus: Rampage at Waterloo</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/CS.jpg" alt="A">
+                        <img src="img/libros/CS.jpg" alt="A"
+                        data-titulo="Carnosaurus"
+                        data-descripcion="Carnosaur es una novela escrita por John Brosnan en 1984 bajo el seudónimo de Harry Adam Knight."
+                        data-genero="Genero: Terror y Ciencia Ficcion"
+                        data-temas="Temas: Dinosaurios">
                 <h2 class="descripcion">Carnosaurus</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/FR.jpg" alt="A">
+                        <img src="img/libros/FR.jpg" alt="A"
+                        data-titulo="Future Remains"
+                        data-descripcion="Future Remains es una novela escrita por Robert Jack en 2017 que sigue a la paleontóloga Tess Creegan en una peligrosa misión de rescate"
+                        data-genero="Genero: Ciencia Ficcion y Aventura"
+                        data-temas="Temas: Dinosaurios">
                 <h2 class="descripcion">Future Remains</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/HAPE.jpg" alt="A">
+                        <img src="img/libros/HAPE.jpg" alt="A"
+                        data-titulo="Horizon Alpha: Predator of Eden"
+                        data-descripcion="Horizon Alpha: Predators of Eden es una novela escrita por D.W. Vogel en 2016"
+                        data-genero="Genero:Ciencia Ficcion y Aventura"
+                        data-temas="Temas: Dinosaurios">
                 <h2 class="descripcion">Horizon Alpha: Predator of Eden</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/JP.png" alt="A">
+                        <img src="img/libros/JP.png" alt="A"
+                        data-titulo="Jurassic Park"
+                        data-descripcion="Jurassic Park es una novela escrita por Michael Crichton en 1990, que trata sobre el campo de la ingeniería genética aplicada al comercio y la explotación de animales. La novela narra cómo se intenta recrear la época de los dinosaurios a través de un parque temático en Costa Rica."
+                        data-genero="Genero: Accion y Aventura"
+                        data-temas="Temas: Dinosaurios, Ingieneria Genetica">
                 <h2 class="descripcion">Jurassic Park</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/JPMP.jpg" alt="A">
+                        <img src="img/libros/JPMP.jpg" alt="A"
+                        data-titulo="Jurassic Park: El mundo perdido"
+                        data-descripcion="El mundo perdido es una novela escrita por Michael Crichton y en 1995. Es una secuela del libro Jurassic Park. La novela narra una expedición a un lugar aislado de América Central, donde los dinosaurios vagan libremente, aunque en este caso los dinosaurios fueron recreados por ingeniería genética."
+                        data-genero="Genero: Mundo Perdido, Ciencia Ficcion y Suspense"
+                        data-temas="Temas: Dinosaurios, Ingieneria Genetica">
                 <h2 class="descripcion">Jurassic Park: El mundo perdido</h2>
                 </div>
             </div>
@@ -121,6 +145,40 @@
                 </a>
             </div>
         </footer>
+        <div id="infoModal" class="vent">
+            <span class="close" id="cerrarInfo">&times;</span>
+                <div class="contenido2">
+                    <h2 id="tituloLibro"></h2>
+                    <img id="imgLibro" style="width:200px; border-radius:10px;">
+                    <p id="descripcionLibro"></p>
+                    <p id="generoLibro"></p>
+                    <p id="temasLibro"></p>
+                </div>
+        </div>
+        <script>
+            const modal = document.getElementById("infoModal");
+            const titulo = document.getElementById("tituloLibro");
+            const descripcion = document.getElementById("descripcionLibro");
+            const genero = document.getElementById("generoLibro");
+            const temas = document.getElementById("temasLibro")
+            const imagen = document.getElementById("imgLibro");
+            document.querySelectorAll(".imagen img").forEach(img => {
+                img.addEventListener("click", () => {
+                    titulo.textContent = img.dataset.titulo;
+                    descripcion.textContent = img.dataset.descripcion;
+                    genero.textContent = img.dataset.genero;
+                    temas.textContent = img.dataset.temas;
+                    imagen.src = img.src;
+                    modal.style.display = "block";
+                });
+            });
+            document.getElementById("cerrarInfo").onclick = () => {
+                modal.style.display = "none";
+            };
+            window.onclick = (e) => {
+                if (e.target === modal) modal.style.display = "none";
+            };
+        </script>
         <div id="sign" class="vent">
             <span class="close" onclick="document.getElementById('sign').style.display='none'">&times;</span>
             <form class="contenido2" action="action_page.php">

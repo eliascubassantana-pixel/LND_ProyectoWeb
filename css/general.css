@@ -180,6 +180,28 @@ body {
     padding-top: 60px;
 }
 
+.vent,
+.vent h1,
+.vent h2,
+.vent h3,
+.vent p,
+.vent label,
+.modal,
+.modal h1,
+.modal h2,
+.modal h3,
+.modal p,
+#caption {
+    color: white;
+}
+
+.vent img,
+.modal img,
+.modal-content img {
+    display: block;
+    margin: 0 auto;
+}
+
 .contenido2 {
     background-color: #2d3436;
     margin: auto;

@@ -1,12 +1,12 @@
 .video {
     position: relative; 
     width: 100%;
-    height: auto;
+    height: 80vh;
 }
 
 .video video {
     width: 100%;
-    height: auto;
+    height: 80vh;
     display: block;
 }
 
