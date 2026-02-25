@@ -37,13 +37,21 @@
             <div>
                 <div class="card">
                     <div class="imagen">
-                        <img src="img/juegos/ASE.png" alt="A">
+                        <img src="img/juegos/ASE.png" alt="A"
+                        data-titulo="ARK Survival Evolved"
+                        data-descripcion="Ark: Survival Evolved es un videojuego de desarrollado por Studio Wildcard, Instinct Games, Efecto Studio y Virtual Basement. Se lanzó oficialmente el 29 de agosto de 2017. En el juego, los jugadores deben sobrevivir en un mundo lleno de dinosaurios y otros animales prehistóricos, además de entes tecnológicos altamente desarrollados los cuales serán tratados en profundidad durante las numerosas batallas contra los jefes encontrados a lo largo del juego, que deambulan por el mapa, especialmente en cuevas y arenas especiales; peligros naturales y otros jugadores potencialmente hostiles. Hay variedades de frutas, verduras y alimentos que se pueden usar para saciar el hambre, crear narcóticos para domesticar animales salvajes o para crear cultivos propios más beneficiosos que las plantas silvestres. El mundo se puede recorrer a pie, navegando en barca, montando un dinosaurio o en uno de los muchos métodos de transporte que aprenderás a hacer a medida que subes de nivel. Los jugadores pueden usar armas de fuego, armas improvisadas y numerosas trampas en contra criaturas hostiles, con la posibilidad de construir bases con total libertad para defenderse con grandes muros o instrumentos defensivos. Hay un modo de un jugador, host local, y un modo multijugador."
+                        data-genero="Genero: Videojuego, Accion y Aventura, Supervivencia, Mundo Abierto"
+                        data-plataforma="Plataformas: Linux, Microsoft Windows, OS X, Xbox One PlayStation, Nintendo Switch, Android, iOS">
                     </div>
                     <h2 class="descripcion">ARK Survival Evolved</h2>
                 </div>
                 <div class="card">
                     <div class="imagen">
-                        <img src="img/juegos/CF.jpg" alt="A">
+                        <img src="img/juegos/CF.jpg" alt="A"
+                        data-titulo="Compound Fracture"
+                        data-descripcion="Compound Fracture es un juego desarrollado por Iteria Games y enfocado en el combate contra dinosaurios. Ambientado en 1996, el jugador asume el papel de un investigador en un mundo hostil, explorando instalaciones y bosques, con mecánicas que incluyen la supervivencia, gestión de suministros y efectos persistentes por heridas. "
+                        data-genero="Genero: Videojuego, FPS, Horror, Supervivencia, Accion"
+                        data-plataforma="Plataformas: PC">
                     </div>
                     <h2 class="descripcion">Compound Fracture</h2>
                 </div>
@@ -51,7 +59,11 @@
             <div>
                 <div class="card">
                     <div class="imagen">
-                        <img src="img/juegos/Comet.jpg" alt="A">
+                        <img src="img/juegos/Comet.jpg" alt="A"
+                        data-titulo="Comet"
+                        data-descripcion="Comet es un juego de tablero, de 2 a 4 jugadores, donde tendrás que salvar a especies en peligro de extinción antes de que un cometa destruya sus hábitats para siempre."
+                        data-genero="Genero: Juego de Mesa, Gestion de Cartas, Estrategia"
+                        data-mecanica="Mecanica: Gestion de Mano y Movimiento en Celdas">
                     </div>
                     <h2 class="descripcion">Comet</h2>
                 </div>
@@ -59,7 +71,11 @@
             <div>
                 <div class="card">
                     <div class="imagen">
-                        <img src="img/juegos/DB.png" alt="A">
+                        <img src="img/juegos/DB.png" alt="A"
+                        data-titulo="Dinoblade"
+                        data-descripcion="Dinoblade es un juego ambientado en un mundo prehistórico. Empuña una espada colosal y lucha para evitar la extinción."
+                        data-genero="Genero: RPG y Soulslike"
+                        data-plataforma="Plataformas: PC">
                     </div>
                     <h2 class="descripcion">Dino Blade</h2>
                 </div>
@@ -769,10 +785,11 @@
             <span class="close" id="cerrarInfo">&times;</span>
                 <div class="contenido2">
                     <h2 id="tituloJuego"></h2>
-                    <img id="imgLibro" style="width:200px; border-radius:10px;">
+                    <img id="imgJuego" style="width:200px; border-radius:10px;">
                     <p id="descripcionJuego"></p>
                     <p id="generoJuego"></p>
-                    <p id="temasJuego"></p>
+                    <p id="plataformaJuego"></p>
+                    <p id="mecanicaJuego"></p>
                 </div>
         </div>
         <script>
@@ -780,14 +797,16 @@
             const titulo = document.getElementById("tituloJuego");
             const descripcion = document.getElementById("descripcionJuego");
             const genero = document.getElementById("generoJuego");
-            const temas = document.getElementById("temasJuego")
+            const temas = document.getElementById("plataformaJuego")
             const imagen = document.getElementById("imgJuego");
+            const mecanica = document.getElementById("mecanicaJuego")
             document.querySelectorAll(".imagen img").forEach(img => {
                 img.addEventListener("click", () => {
                     titulo.textContent = img.dataset.titulo;
                     descripcion.textContent = img.dataset.descripcion;
                     genero.textContent = img.dataset.genero;
-                    temas.textContent = img.dataset.temas;
+                    temas.textContent = img.dataset.plataforma;
+                    mecanica.textContent = img.dataset.mecanica;
                     imagen.src = img.src;
                     modal.style.display = "block";
                 });
