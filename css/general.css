@@ -168,7 +168,19 @@ body {
     margin: auto;
     border-radius: 10px;
     width: min(92vw, 420px);
+    position: relative;
+    padding-top: 12px;
     animation: zoom 0.3s;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    font-size: 32px;
+    line-height: 1;
+    color: #fff;
+    cursor: pointer;
 }
 
 .contenedor {
