@@ -5,6 +5,32 @@
   text-align: center;
 }
 
+.filtros {
+ display: flex;
+ gap: 15px;
+ padding: 20px;
+ justify-content: center;
+ flex-wrap: wrap;
+}
+
+.filtros input,
+.filtros select {
+ padding: 10px 15px;
+ border-radius: 10px;
+ border: none;
+ font-size: 1rem;
+ outline: none;
+}
+
+.filtros input {
+ width: 250px;
+}
+
+.filtros select {
+ cursor: pointer;
+}
+
+
 .galeria {
   column-count: 5; 
   column-gap: 20px;

@@ -33,6 +33,19 @@
         <div class="titulo">
             <h1>Juegos</h1>
         </div>
+        <div class="filtros">
+            <input type="text" id="buscador" placeholder="Buscar juego...">
+
+            <select id="filtroGenero">
+                <option value="">Todos los géneros</option>
+                <option value="Accion">Acción</option>
+                <option value="Supervivencia">Supervivencia</option>
+                <option value="FPS">FPS</option>
+                <option value="RPG">RPG</option>
+                <option value="Estrategia">Estrategia</option>
+                <option value="Juego de Mesa">Juego de Mesa</option>
+            </select>
+        </div>
         <section class="galeria">
             <div>
                 <div class="card">
@@ -357,7 +370,7 @@
                         data-titulo="Kyoryu"
                         data-descripcion="Dinosaurios rediseñados vagan por un Japón postapocalíptico. Un juego basado en una historia que te pone en las garras de Tori, el hijo de un T-Rex samurái."
                         data-genero="Genero: Videojuego, Accion, Aventura, Narrativa, Exploración"
-                        data-plataforma="">
+                        data-plataforma="Plataformas:">
                     </div>
                     <h2 class="descripcion">Kyoryu</h2>
                 </div>
@@ -1136,6 +1149,26 @@
             window.onclick = (e) => {
                 if (e.target === modal) modal.style.display = "none";
             };
+            const buscador = document.getElementById("buscador");
+            const filtroGenero = document.getElementById("filtroGenero");
+            const cards = document.querySelectorAll(".card");
+
+            function filtrar() {
+                const texto = buscador.value.toLowerCase();
+                const generoFiltro = filtroGenero.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const titulo = card.querySelector(".descripcion").textContent.toLowerCase();
+                    const genero = card.querySelector("img").dataset.genero?.toLowerCase() || "";
+
+                    const coincideTexto = titulo.includes(texto);
+                    const coincideGenero = generoFiltro === "" || genero.includes(generoFiltro);
+
+                    card.style.display = (coincideTexto && coincideGenero) ? "inline-block" : "none";
+                });
+            }           
+            buscador.addEventListener("input", filtrar);
+            filtroGenero.addEventListener("change", filtrar);
         </script>
         <div id="sign" class="vent">
             <form class="contenido2" action="action_page.php">
