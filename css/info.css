@@ -1,5 +1,21 @@
 .info {
     color: white;
-    margin: 10px 300px;
+    margin: 20px auto;
     text-align: justify;
+    max-width: 1000px;
+    padding: 0 20px 20px;
+    font-size: clamp(1rem, 0.8vw + 0.85rem, 1.2rem);
+}
+
+@media (max-width: 600px) {
+    .info {
+        padding: 0 16px 20px;
+        text-align: left;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .info {
+        max-width: 820px;
+    }
 }
