@@ -33,6 +33,26 @@
         <div class="titulo">
             <h1>Peliculas y Series</h1>
         </div>
+        <div class="filtros">
+            <input type="text" id="buscador" placeholder="Buscar juego...">
+
+            <select id="filtroGenero">
+                <option value="">Todos los géneros</option>
+                <option value="Accion">Accion</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Documental">Documental</option>
+                <option value="Ciencia Ficcion">Ciencia Ficcion</option>
+                <option value="Terror">Terror</option>
+                <option value="Infantil">Infantil</option>
+                <option value="Animacion">Animacion</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Belico">Belico</option>
+                <option value="Drama">Drama</option>
+                <option value="Comedia">Comedia</option>
+                <option value="Horror">Horror</option>
+                <option value="Misterio">Misterio</option>
+            </select>
+        </div>
         <section class="galeria">
             <div>
                 <div class="imagen">
@@ -209,7 +229,7 @@
                         <img src="img/pelis/JWTD.png" alt="A"
                         data-titulo="Jurassic World: Teorida del Dinocaos"
                         data-descripcion="Jurassic World: Teoría del Dinocaos es una serie animada. Se establece como la secuela directa de la serie Jurassic World: Campamento Cretacico"
-                        data-genero="Genero: Ciencia Ficcion, Infantil, Animacion, Aventura, Suspense, Infantil y Accion"
+                        data-genero="Genero: Ciencia Ficcion, Infantil, Animacion, Aventura, Suspense y Accion"
                         data-tipo="Tipo: Serie">
                 <h2 class="descripcion">Jurassic World: Teorida del Dinocaos</h2>
                 </div>
@@ -258,8 +278,8 @@
                 <div class="imagen">
                         <img src="img/pelis/PP.png" alt="A"
                         data-titulo="Planeta Prehistorico"
-                        data-descripcion=""
-                        data-genero="Genero"
+                        data-descripcion="Planeta prehistórico es un programa de televisión sobre animales prehistóricos estrenada el 23 de mayo de 2022. El documental sigue a dinosaurios que vivieron alrededor del globo en el periodo Cretácico superior, hace 66 millones de años"
+                        data-genero="Genero: Documental"
                         data-tipo="Tipo: Pelicula">
                 <h2 class="descripcion">Planeta Prehistorico</h2>
                 </div>
@@ -268,8 +288,8 @@
                 <div class="imagen">
                         <img src="img/pelis/DP.png" alt="A"
                         data-titulo="Proyecto Dinosaurio"
-                        data-descripcion=""
-                        data-genero="Genero: "
+                        data-descripcion="Proyecto Dinosaurio es una película británica de 2012. En 2011, la Sociedad Criptológica de Inglaterra envió una expedición al Congo en busca del monstruo del Lago Ness. Nunca más se supo de los investigadores, aunque sí se hallaron las cintas de vídeo que dejaron grabadas."
+                        data-genero="Genero: Terror, Ciencia Ficcion, Aventura y Suspense"
                         data-tipo="Tipo: Pelicula">
                 <h2 class="descripcion">Proyecto Dinosaurio</h2>
                 </div>
@@ -328,6 +348,26 @@
             window.onclick = (e) => {
                 if (e.target === modal) modal.style.display = "none";
             };
+            const buscador = document.getElementById("buscador");
+            const filtroGenero = document.getElementById("filtroGenero");
+            const cards = document.querySelectorAll(".imagen");
+
+            function filtrar() {
+                const texto = buscador.value.toLowerCase();
+                const generoFiltro = filtroGenero.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const titulo = card.querySelector(".descripcion").textContent.toLowerCase();
+                    const genero = card.querySelector("img").dataset.genero?.toLowerCase() || "";
+
+                    const coincideTexto = titulo.includes(texto);
+                    const coincideGenero = generoFiltro === "" || genero.includes(generoFiltro);
+
+                    card.style.display = (coincideTexto && coincideGenero) ? "inline-block" : "none";
+                });
+            }           
+            buscador.addEventListener("input", filtrar);
+            filtroGenero.addEventListener("change", filtrar);
         </script>
         <div id="sign" class="vent">
             <form class="contenido2" action="action_page.php">
