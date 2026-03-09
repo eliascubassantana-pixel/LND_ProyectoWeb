@@ -33,13 +33,28 @@
         <div class="titulo">
             <h1>Libros</h1>
         </div>
+        <div class="filtros">
+            <input type="text" id="buscador" placeholder="Buscar libro...">
+
+            <select id="filtroGenero">
+                <option value="">Todos los generos</option>
+                <option value="Accion">Accion</option>
+                <option value="Belico">Belico</option>
+                <option value="Historia alternativa">Historia alternativa</option>
+                <option value="Terror">Terror</option>
+                <option value="Ciencia Ficcion">Ciencia Ficcion</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Suspense">Suspense</option>
+                <option value="Mundo Perdido">Mundo Perdido</option>
+            </select>
+        </div>
         <section class="galeria">
             <div>
                 <div class="imagen">
                         <img src="img/libros/BSRW.jpg" alt="A"
                         data-titulo="Battlesaurus: Rampage at Waterloo"
                         data-descripcion="Battlesaurus: Rampage at Waterloo es una novela de historia alternativa escrita por Brian Falkner en 2015. Se ambienta durante las Guerras Napoleónicas, en un universo donde los dinosaurios nunca se extinguieron."
-                        data-genero="Genero: Historia alternativa y Fantasia">
+                        data-genero="Genero: Historia alternativa y Belico">
                     <h2 class="descripcion">Battlesaurus: Rampage at Waterloo</h2>
                 </div>
             </div>
@@ -66,7 +81,7 @@
                         <img src="img/libros/HAPE.jpg" alt="A"
                         data-titulo="Horizon Alpha: Predator of Eden"
                         data-descripcion="Horizon Alpha: Predators of Eden es una novela escrita por D.W. Vogel en 2016"
-                        data-genero="Genero:Ciencia Ficcion y Aventura">
+                        data-genero="Genero: Ciencia Ficcion y Aventura">
                 <h2 class="descripcion">Horizon Alpha: Predator of Eden</h2>
                 </div>
             </div>
@@ -90,31 +105,46 @@
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/MP.jpg" alt="A">
+                        <img src="img/libros/MP.jpg" alt="A"
+                        data-titulo="El Mundo Perdido"
+                        data-descripcion="El mundo perdido es una novela del escritor escocés Arthur Conan Doyle, sobre una expedición a una meseta sudamericana en donde aún sobreviven animales prehistóricos.[1]​ Fue publicada en 1912"
+                        data-genero="Genero: Mundo Perdido, Ciencia Ficcion y Aventura">
                 <h2 class="descripcion">El Mundo Perdido</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/NZ.jpg" alt="A">
+                        <img src="img/libros/NZ.jpg" alt="A"
+                        data-titulo="NeoZoic"
+                        data-descripcion="Neozoic es un cómic escrito por Paul Ens. El arte es de J. Korim y Jessie Lam. La trama se desarrolla en un universo diferente donde los dinosaurios no se extinguieron y los humanos nunca se convirtieron en la especie dominante."
+                        data-genero="Genero: Ciencia Ficcion, Historia alternativa, Accion y Aventura">
                 <h2 class="descripcion">NeoZoic</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/TDF.jpg" alt="A">
+                        <img src="img/libros/TDF.jpg" alt="A"
+                        data-titulo="The Dinosaur Four"
+                        data-descripcion="The Dinosaur Four es una novela escrita por Geoff Jones, publicada en mayo de 2014. La historia trata sobre diez extraños que se encuentran en una cafetería en Denver, cuando, tras un extraño sonido de tic-tac, un pedazo del edificio es transportado 67 millones de años al pasado, a la época del Cretácico. Los supervivientes deben sobrevivir a dinosaurios y peligros prehistóricos, buscando una forma de regresar a casa, mientras uno de los integrantes planea mantenerlos atrapados en el pasado"
+                        data-genero="Genero: Ciencia Ficcion, Accion, Suspense y Aventura">
                 <h2 class="descripcion">The Dinosaur Four</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/PWOU.jpg" alt="A">
+                        <img src="img/libros/PWOU.jpg" alt="A"
+                        data-titulo="Primitive War: Opiate Undertow"
+                        data-descripcion="Primitive War: Opiate Undertow es la novela publicada en 2017 del escritor estadounidense Ethan Pettus. La novela sigue a un grupo de soldados estadounidenses que se encuentran con dinosaurios des-extintos en un valle selvático de Vietnam en 1968."
+                        data-genero="Genero: Ciencia Ficcion, Terror, Suspense y Belico">
                 <h2 class="descripcion">Primitive War: Opiate Undertow</h2>
                 </div>
             </div>
             <div>
                 <div class="imagen">
-                        <img src="img/libros/PWAI.jpg" alt="A">
+                        <img src="img/libros/PWAI.jpg" alt="A"
+                        data-titulo="Primitive War II: Animus Infernal"
+                        data-descripcion="Primitive War II: Animus Infernal se publicó el 18 de noviembre de 2020."
+                        data-genero="Genero: Ciencia Ficcion, Terror, Accion, Aventura y Belico">
                 <h2 class="descripcion">Primitive War II: Animus Infernal</h2>
                 </div>
             </div>
@@ -169,6 +199,26 @@
             window.onclick = (e) => {
                 if (e.target === modal) modal.style.display = "none";
             };
+            const buscador = document.getElementById("buscador");
+            const filtroGenero = document.getElementById("filtroGenero");
+            const cards = document.querySelectorAll(".imagen");
+
+            function filtrar() {
+                const texto = buscador.value.toLowerCase();
+                const generoFiltro = filtroGenero.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const titulo = card.querySelector(".descripcion").textContent.toLowerCase();
+                    const genero = card.querySelector("img").dataset.genero?.toLowerCase() || "";
+
+                    const coincideTexto = titulo.includes(texto);
+                    const coincideGenero = generoFiltro === "" || genero.includes(generoFiltro);
+
+                    card.style.display = (coincideTexto && coincideGenero && coincideTipo) ? "inline-block" : "none";
+                });
+            }           
+            buscador.addEventListener("input", filtrar);
+            filtroGenero.addEventListener("change", filtrar);
         </script>
         <div id="sign" class="vent">
             <form class="contenido2" action="action_page.php">
