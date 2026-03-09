@@ -34,8 +34,7 @@
             <h1>Peliculas y Series</h1>
         </div>
         <div class="filtros">
-            <input type="text" id="buscador" placeholder="Buscar juego...">
-
+            <input type="text" id="buscador" placeholder="Buscar pelicula o serie...">
             <select id="filtroGenero">
                 <option value="">Todos los géneros</option>
                 <option value="Accion">Accion</option>
@@ -51,6 +50,11 @@
                 <option value="Comedia">Comedia</option>
                 <option value="Horror">Horror</option>
                 <option value="Misterio">Misterio</option>
+            </select>
+            <select id="filtroTipo">
+                <option value="">Todos los tipos</option>
+                <option value="Pelicula">Pelicula</option>
+                <option value="Serie">Serie</option>
             </select>
         </div>
         <section class="galeria">
@@ -200,7 +204,7 @@
                         data-titulo="Dinosaur"
                         data-descripcion="Dinosaurio es una película de Walt Disney Pictures. Cuando una devastadora lluvia de meteoros provoca el caos en ese tranquilo mundo, Áladar y varios lemures de su familia ponen rumbo a tierra firme y se unen a un grupo de dinosaurios que buscan desesperadamente un lugar donde anidar en paz."
                         data-genero="Genero: Animacion, Infantil, Accion y Aventura"
-                        data-tipo="">
+                        data-tipo="Tipo: Pelicula">
                 <h2 class="descripcion">Dinosaur</h2>
                 </div>
             </div>
@@ -227,11 +231,11 @@
             <div>
                 <div class="imagen">
                         <img src="img/pelis/JWTD.png" alt="A"
-                        data-titulo="Jurassic World: Teorida del Dinocaos"
-                        data-descripcion="Jurassic World: Teoría del Dinocaos es una serie animada. Se establece como la secuela directa de la serie Jurassic World: Campamento Cretacico"
+                        data-titulo="Jurassic World: Teoria del Dinocaos"
+                        data-descripcion="Jurassic World: Teoria del Dinocaos es una serie animada. Se establece como la secuela directa de la serie Jurassic World: Campamento Cretacico"
                         data-genero="Genero: Ciencia Ficcion, Infantil, Animacion, Aventura, Suspense y Accion"
                         data-tipo="Tipo: Serie">
-                <h2 class="descripcion">Jurassic World: Teorida del Dinocaos</h2>
+                <h2 class="descripcion">Jurassic World: Teoria del Dinocaos</h2>
                 </div>
             </div>
             <div>
@@ -258,7 +262,7 @@
                 <div class="imagen">
                         <img src="img/pelis/Primal.png" alt="A"
                         data-titulo="Primal"
-                        data-descripcion="Primal bes una serie de televisión para adultos franco-estadounidense. Primal sigue a un hombre de las cavernas llamado Spear, un cazador formidable en los albores de la evolución, y una tiranosaurio llamada Fang al borde de la extinción, reunidos por la tragedia en una asociación poco probable mientras luchan por sobrevivir a las criaturas violentas que también viven en el mundo prehistórico."
+                        data-descripcion="Primal es una serie de televisión para adultos franco-estadounidense. Primal sigue a un hombre de las cavernas llamado Spear, un cazador formidable en los albores de la evolución, y una tiranosaurio llamada Fang al borde de la extinción, reunidos por la tragedia en una asociación poco probable mientras luchan por sobrevivir a las criaturas violentas que también viven en el mundo prehistórico."
                         data-genero="Genero: Accion, Aventura, Animacion, Terror, Drama, Horror y Suspense"
                         data-tipo="Tipo: Serie">
                 <h2 class="descripcion">Primal</h2>
@@ -350,24 +354,29 @@
             };
             const buscador = document.getElementById("buscador");
             const filtroGenero = document.getElementById("filtroGenero");
+            const filtroTipo = document.getElementById("filtroTipo");
             const cards = document.querySelectorAll(".imagen");
 
             function filtrar() {
                 const texto = buscador.value.toLowerCase();
                 const generoFiltro = filtroGenero.value.toLowerCase();
+                const tipoFiltro = filtroTipo.value.toLowerCase();
 
                 cards.forEach(card => {
                     const titulo = card.querySelector(".descripcion").textContent.toLowerCase();
                     const genero = card.querySelector("img").dataset.genero?.toLowerCase() || "";
+                    const tipo = card.querySelector("img").dataset.tipo?.toLowerCase() || "";
 
                     const coincideTexto = titulo.includes(texto);
                     const coincideGenero = generoFiltro === "" || genero.includes(generoFiltro);
+                    const coincideTipo = tipoFiltro === "" || tipo.includes(tipoFiltro);
 
-                    card.style.display = (coincideTexto && coincideGenero) ? "inline-block" : "none";
+                    card.style.display = (coincideTexto && coincideGenero && coincideTipo) ? "inline-block" : "none";
                 });
             }           
             buscador.addEventListener("input", filtrar);
             filtroGenero.addEventListener("change", filtrar);
+            filtroTipo.addEventListener("change", filtrar);
         </script>
         <div id="sign" class="vent">
             <form class="contenido2" action="action_page.php">
