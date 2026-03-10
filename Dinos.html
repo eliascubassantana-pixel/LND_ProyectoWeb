@@ -33,15 +33,30 @@
         <div class="titulo">
             <h1>Dinosaurios</h1>
         </div>
+        <div class="filtros">
+            <input type="text" id="buscador" placeholder="Buscar dinosaurio...">
+
+            <select id="filtroPeriodo">
+                <option value="">Todos los periodos</option>
+                <option value="Triasico">Triasico</option>
+                <option value="Cretacico">Cretacico</option>
+                <option value="Jurasico">Jurasico</option>
+            </select>
+            <select id="filtroAlimentacion">
+                <option value="">Todos los tipos</option>
+                <option value="Pelicula">Carnivoro</option>
+                <option value="Serie">Herbivoro</option>
+            </select>
+        </div>
        <section class="galeria">
             <div>
                 <div class="card">
                     <div class="imagen">
                         <img src="img/dinos/carno.jpg" alt="A"
                         data-nombre="Carnotaurus"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Carnotaurus (toro carnívoro) fue un dinosaurio terópodo conocido por sus dos cuernos sobre los ojos, su cabeza corta y sus brazos extremadamente pequeños. Tenía un cuerpo esbelto y patas largas, lo que sugiere que podía correr rápido para cazar."
+                        data-periodo="Periodo: Cretacico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Carnotaurus</h2>
                 </div>
@@ -49,9 +64,9 @@
                     <div class="imagen">
                         <img src="img/dinos/coms.png" alt="A"
                         data-nombre="Compsognathus"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Compsognathus (con mandíbula elegante y pies largos) fue un dinosaurio pequeño, ligero y muy ágil, con patas largas y una cola larga que le ayudaba a mantener el equilibrio. Medía aproximadamente 1 metro de largocon mandíbula elegante y pies largos"
+                        data-periodo="Periodo: Jurasico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Compsognathus</h2>
                 </div>
@@ -59,9 +74,9 @@
                     <div class="imagen">
                         <img src="img/dinos/Dilo.jpg" alt="A"
                         data-nombre="Dilophosaurio"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Dilophosaurus (lagarto de dos crestas) fue un dinosaurio de tamaño mediano conocido por las dos crestas delgadas en la parte superior de su cabeza. Tenía un cuerpo ligero, patas fuertes y podía correr con rapidez."
+                        data-periodo="Periodo: Jurasico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Dilophosaurio</h2>
                 </div>
@@ -69,9 +84,9 @@
                     <div class="imagen">
                         <img src="img/dinos/Diplo.jpg" alt="A"
                         data-nombre="Diplodocus"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Diplodocus (doble viga) fue un dinosaurio muy grande y de cuello y cola muy largos. Caminaba sobre cuatro patas y tenía una cabeza pequeña en comparación con su enorme cuerpo."
+                        data-periodo="Periodo: Jurasico"
+                        data-alimentacion="Alimentacion: Herbivoro">
                     </div>
                     <h2 class="descripcion">Diplodocus</h2>
                 </div>
@@ -79,9 +94,9 @@
                     <div class="imagen">
                         <img src="img/dinos/Este.jpg" alt="A"
                         data-nombre="Estegosaurio"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Stegosaurus (lagarto con tejado) fue un dinosaurio conocido por las grandes placas óseas en su espalda y las cuatro púas en su cola, que usaba para defenderse de depredadores."
+                        data-periodo="Periodo: Jurasico"
+                        data-alimentacion="Alimentacion: Herbivoro">
                     </div>
                     <h2 class="descripcion">Estegosaurio</h2>
                 </div>
@@ -89,9 +104,9 @@
                     <div class="imagen">
                         <img src="img/dinos/Mosa.png" alt="A"
                         data-nombre="Mosasaurio"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Mosasaurus (lagarto del río Mosa) fue un gran reptil marino, con cuerpo alargado, aletas y una cola fuerte para nadar. Tenía mandíbulas muy poderosas con muchos dientes afilados para capturar presas en el océano."
+                        data-periodo="Periodo: Cretacico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Mosasaurio</h2>
                 </div>
@@ -99,9 +114,9 @@
                     <div class="imagen">
                         <img src="img/dinos/ptera.jpg" alt="A"
                         data-nombre="Pteranodon"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Pteranodon (ala desdentado) fue un reptil volador con alas muy grandes y una larga cresta en la parte posterior de la cabeza. No era un dinosaurio, sino un pterosaurio que podía planear largas distancias sobre el mar."
+                        data-periodo="Periodo: Cretacico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Pteranodon</h2>
                 </div>
@@ -109,9 +124,9 @@
                     <div class="imagen">
                         <img src="img/dinos/rex.jpg" alt="A"
                         data-nombre="Tiranosaurio Rex"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Tyrannosaurus rex ( Rey Lagarto Tirano) fue uno de los dinosaurios más grandes y poderosos. Tenía una cabeza enorme, dientes muy grandes y brazos muy cortos, pero patas fuertes que le permitían moverse con rapidez."
+                        data-periodo="Periodo: Cretacico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Tiranosaurio Rex</h2>
                 </div>
@@ -119,9 +134,9 @@
                     <div class="imagen">
                         <img src="img/dinos/spino.png" alt="A"
                         data-nombre="Spinosaurio"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Spinosaurus (lagarto de espinas) fue un dinosaurio carnívoro muy grande, famoso por la gran “vela” formada por espinas largas en su espalda. Tenía un hocico largo parecido al de un cocodrilo, adaptado para atrapar presas en el agua."
+                        data-periodo="Periodo: Cretacico"
+                        data-alimentacion="Alimentacion: Carnivoro">
                     </div>
                     <h2 class="descripcion">Spinosaurio</h2>
                 </div>
@@ -129,9 +144,9 @@
                     <div class="imagen">
                         <img src="img/dinos/trice.png" alt="A"
                         data-nombre="Triceratops"
-                        data-descripcion=""
-                        data-periodo=""
-                        data-alimentacion="">
+                        data-descripcion="El Triceratops (Cara de Tres Cuernos) fue un dinosaurio grande conocido por sus tres cuernos en la cabeza y un gran escudo óseo en el cuello que le servía para defensa."
+                        data-periodo="Periodo: Cretacico"
+                        data-alimentacion="Alimentacion: Herbivoro">
                     </div>
                     <h2 class="descripcion">Triceratops</h2>
                 </div>
@@ -189,6 +204,31 @@
             window.onclick = (e) => {
                 if (e.target === modal) modal.style.display = "none";
             };
+            const buscador = document.getElementById("buscador");
+            const filtroPeriodo = document.getElementById("filtroPeriodo");
+            const filtroAlimentacion = document.getElementById("filtroAlimentacion");
+            const cards = document.querySelectorAll(".card");
+
+            function filtrar() {
+                const texto = buscador.value.toLowerCase();
+                const periodoFiltro = filtroPeriodo.value.toLowerCase();
+                const alimentacionFiltro = filtroAlimentacion.value.toLowerCase();
+
+                cards.forEach(card => {
+                    const titulo = card.querySelector(".descripcion").textContent.toLowerCase();
+                    const periodo = card.querySelector("img").dataset.periodo?.toLowerCase() || "";
+                    const alimentacion = card.querySelector("img").dataset.alimentacion?.toLowerCase() || "";
+
+                    const coincideTexto = titulo.includes(texto);
+                    const coincidePeriodo = periodoFiltro === "" || periodo.includes(periodoFiltro);
+                    const coincideAlimentacion = alimentacionFiltro === "" || alimentacion.includes(alimentacionFiltro);
+
+                    card.style.display = (coincideTexto && coincidePeriodo && coincideAlimentacion) ? "inline-block" : "none";
+                });
+            }           
+            buscador.addEventListener("input", filtrar);
+            filtroPeriodo.addEventListener("change", filtrar);
+            filtroAlimentacion.addEventListener("change", filtrar);
         </script>
         <div id="sign" class="vent">
             <form class="contenido2" action="action_page.php">
