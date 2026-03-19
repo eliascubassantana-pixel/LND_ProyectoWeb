@@ -82,6 +82,16 @@
         </section>
         <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Cargando" data-fw-param="177094/">
         </script>
+        <script>
+        document.querySelector("form").addEventListener("submit", function(e){
+            const pass = document.querySelector('[name="cont"]').value;
+            const rep = document.querySelector('[name="cont-rep"]').value;
+            if(pass !== rep){
+                alert("Las contraseñas no coinciden");
+                e.preventDefault();
+            }
+            });
+        </script>
         <footer class="foot">
             <div class="autor">
                 <img class="imgfoot" src="img/general/PrimitiveEarth.png" alt="A">
@@ -103,7 +113,7 @@
             </div>
         </footer>
         <div id="sign" class="vent">
-            <form class="contenido2" action="action_page.php">
+            <form class="contenido2">
                 <span class="close" onclick="document.getElementById('sign').style.display='none'">&times;</span>
                 <div class="contenedor">
                     <h1>Registrarse</h1>

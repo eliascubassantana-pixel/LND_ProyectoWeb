@@ -12,6 +12,13 @@
     object-fit: cover;
 }
 
+.video::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
 .titulo {
     position: absolute;
     top: 50%; 
@@ -60,6 +67,12 @@
     margin: 0;
     border-radius: 10px;
     padding: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contenido div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
 .contenido a {
