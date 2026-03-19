@@ -17,7 +17,7 @@
             <div class="nav">
                 <ul>
                     <li>
-                        <a>Menu</a>
+                        <a href="#">Menu</a>
                         <ul>
                             <li><a href="index.html">Inicio</a></li>
                             <li><a href="Info.html">Informacion</a></li>
@@ -83,14 +83,12 @@
         <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" preloader-text="Cargando" data-fw-param="177094/">
         </script>
         <script>
-        document.querySelector("form").addEventListener("submit", function(e){
-            const pass = document.querySelector('[name="cont"]').value;
-            const rep = document.querySelector('[name="cont-rep"]').value;
-            if(pass !== rep){
-                alert("Las contraseñas no coinciden");
-                e.preventDefault();
-            }
-            });
+        document.querySelector(".open-modal").addEventListener("click", () => {
+    document.getElementById("sign").classList.add("active");
+});
+document.querySelector(".close").addEventListener("click", () => {
+    document.getElementById("sign").classList.remove("active");
+});
         </script>
         <footer class="foot">
             <div class="autor">
